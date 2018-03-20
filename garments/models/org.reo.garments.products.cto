@@ -1,0 +1,53 @@
+namespace org.reo.garments.products
+import org.reo.garments.participants.*
+
+/**
+  * A business network for SCM of garments industry
+*/
+
+asset Delivery identified by deliveryId {
+  o String deliveryId
+  o productType type
+  o delivered progress
+  o Long itemCount
+  --> Contract contract
+}
+
+asset Contract identified by contractId {
+  o String contractId
+  o DateTime dateOfContract
+  o Double ratePerUnit
+  --> RawSupplier rawsupplier
+  --> Manufacturer manufacturer
+  --> Distributor distributor
+}
+
+enum productType {
+  o Trousers
+  o Shirts 
+  o Suit
+  o Sweaters
+  o Footwears
+  o Bags
+}
+
+enum delivered {
+  o CREATED
+  o IN_TRANSIT
+  o ARRIVED
+}
+
+event deliveryRecieved {
+  --> Delivery delivery
+}
+
+abstract transaction deliveryTransaction {
+  --> Delivery delivery
+}
+
+transaction fundsTransfer extends deliveryTransaction {
+
+}
+
+transaction Deal {
+}

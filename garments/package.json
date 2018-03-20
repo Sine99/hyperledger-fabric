@@ -1,0 +1,22 @@
+{
+  "name": "garments",
+  "version": "0.0.1",
+  "description": "This is the test case for garments SCM &#34;domain model&#34;",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Saurav",
+  "email": "admin@admin.com",
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "composer-admin": "latest",
+    "composer-client": "latest",
+    "composer-common": "latest",
+    "composer-connector-embedded": "latest",
+    "chai": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest"
+  }
+}

@@ -1,0 +1,32 @@
+namespace org.reo.garments.participants
+
+abstract participant SCMparticipants identified by participantId {
+  o String participantId
+  o String emailId
+  o ParticipantInfo participantinfo
+}
+
+concept ParticipantInfo{
+  o String firstName
+  o String lastName
+  o Address address
+}
+
+concept Address {
+  o String street optional
+  o String city 
+  o String state
+  o String pincode
+}
+
+participant RawSupplier extends SCMparticipants{
+
+}
+
+participant Manufacturer extends SCMparticipants{
+
+}
+
+participant Distributor extends SCMparticipants{
+
+}
