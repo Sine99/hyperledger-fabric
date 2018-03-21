@@ -1,1 +1,1 @@
-# Blockchain Network for a fictitious company - ‘Reo’ garments.
+# Blockchain Network for a fictitious company ‘Reo’ garments.
